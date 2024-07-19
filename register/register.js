@@ -19,8 +19,19 @@ const msg_pwd="Password must be at least 6 characters";
 // Déclarations password 2
 const password2=document.getElementById('psswrd2');
 const password2content=document.getElementById('psswrdcontent2');
-const msg_pwd2="Password2 is required";
+const msg_pwd2_match="Passwords do not match";
+const msg_pwd2_empty="Password2 is required";
 
+
+
+function addError(node,child,msg){
+    child.classList.remove('success');
+    child.classList.add('error');
+    let node_msg= document.createElement('p');
+    node_msg.classList.add('error');
+    node_msg.textContent=msg;
+    node.appendChild(node_msg);
+}
 
 
 function checkusername(){
@@ -35,22 +46,15 @@ function checkusername(){
         return true;
     }
     else if(usercontent.value.length>=15){
-        usercontent.classList.remove('success');
-        usercontent.classList.add('error');
-        let node_msg= document.createElement('p');
-        node_msg.classList.add('error');
-        node_msg.textContent=msg_user_long;
-        username.appendChild(node_msg);
+        if (node_msg){
+            node_msg.remove();
+        }
+        addError(username,usercontent,msg_user_long);
         return false;
 
     }
     else {
-        usercontent.classList.remove('success');
-        usercontent.classList.add('error');
-        let node_msg= document.createElement('p');
-        node_msg.classList.add('error');
-        node_msg.textContent=msg_user_low;
-        username.appendChild(node_msg);
+        addError(username,usercontent,msg_user_low);
         return false;
     }
 
@@ -70,12 +74,10 @@ function checkemail(){
         return true;
     }
     else {
-        emailcontent.classList.remove('success');
-        emailcontent.classList.add('error');
-        let node_msg=document.createElement('p');
-        node_msg.classList.add('error');
-        node_msg.textContent=msg_email;
-        email.appendChild(node_msg);
+        if (node_msg){
+            node_msg.remove();
+        }
+        addError(email,emailcontent,msg_email);
         return false;
     }
 }
@@ -94,12 +96,11 @@ function checkpwd(){
 
     }
     else {
-        passwordcontent.classList.remove('success');
-        passwordcontent.classList.add('error');
-        let node_msg=document.createElement('p');
-        node_msg.classList.add('error');
-        password.appendChild(node_msg);
-        node_msg.textContent=msg_pwd;
+
+        if (node_msg){
+            node_msg.remove();
+        }
+        addError(password,passwordcontent,msg_pwd);
         return false;
     }
 }
@@ -117,13 +118,19 @@ function ckeckpwd2(){
         }
         return true;
     }
+    else if(password2content.value===''){
+        if (node_msg){
+            node_msg.remove();
+        }
+        addError(password2,password2content,msg_pwd2_empty);
+        return false;
+
+    }
     else {
-        password2content.classList.remove('success');
-        password2content.classList.add('errorr');
-        let node_msg=document.createElement('p');
-        node_msg.classList.add('error');
-        node_msg.textContent=msg_pwd2;
-        password2.appendChild(node_msg);
+        if (node_msg){
+            node_msg.remove();
+        }
+        addError(password2,password2content,msg_pwd2_match);
         return false;
 
     }
