@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8"/>
+    </head>
+    <body>
+        <form onsubmit="handlesubmit(event)">
+            <h1>
+                Register With Us
+            </h1>
+
+            <div class="input" id="username">
+                <label>Username</label>
+                <input   type="text" id="usercontent" name="username"  placeholder="Enter username" autocomplete="username"/>
+            </div>
+
+            <div class="input" id="email">
+                <label>Email</label>
+                <input type="mail" id="emailcontent" name="email"  placeholder="Enter email"/>
+            </div>
+
+            <div class="input" id="psswrd">
+                <label>Password</label>
+                <input type="password" id="psswrdcontent" name="username"  placeholder="Enter password" autocomplete="current-password"/>
+            </div>
+
+            <div class="input" id="psswrd2">
+                <label>Confirm Password</label>
+                <input type="password" id="psswrdcontent2" name="username"  placeholder="Enter password again" autocomplete="current-password"/>
+            </div>
+
+            <button type="submit">
+                Submit
+            </button>
+
+        </form>
+        <script src="register.js"></script>
+    </body>
+</html>
