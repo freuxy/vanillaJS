@@ -1,0 +1,47 @@
+/* Write CSS code here */
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    font-family: lato;
+}
+
+.calculator{
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#display{
+    padding: 20px;
+    font-size: 30px;
+    border: none;
+    text-align: right;
+    background-color: yellow;
+    color: black;
+}
+
+.buttons{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.btn{
+    padding: 20px;
+    font-size: 20px;
+    border: 1px dashed black;
+    background-color: azure;
+    cursor:pointer;
+}
+
+.equal{
+    grid-column: span 3;
+    background-color:slategrey;
+
+}
+
+.btn:hover {
+    opacity: 0.8;
+}

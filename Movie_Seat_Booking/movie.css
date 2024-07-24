@@ -1,0 +1,99 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    background-color: #242333 ;
+    color: white;
+    height: 100vh;
+    font-size: 16px;
+    font-family: lato;
+}
+
+#container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 25vh;
+}
+
+#pick_video{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#movies{
+    height: 32px;
+    border-radius: 8px;
+    margin-left: 24px;
+    padding: 0px 8px;
+}
+
+.seat{
+    width: 16px;
+    height: 14px;
+    border-radius: 16px 16px 0px 0px;
+    margin-right: 4px;
+}
+
+#seat{
+    display: flex;
+    align-items: center;
+}
+
+#seat_status{
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+    color: gray;
+}
+
+.seat_selected{
+    background-color:aqua;
+}
+
+.seat_na{
+    background-color:slategrey;
+}
+
+.seat_occupied{
+    background-color:white;
+}
+
+#screen{
+    background-color: white;
+    width: 200px;
+    height: 52px;
+    box-shadow: 0px 3px 10px;
+    margin-bottom: 24px;
+}
+
+#roomAndscreen{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 200px;
+}
+
+
+.column_room{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 125px;
+}
+
+
+.col{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+.aqua{
+    color:aqua;
+}
+

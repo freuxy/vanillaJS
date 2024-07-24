@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="movie.css">
+        <meta charset="UTF_8">
+    </head>
+
+    <body>
+        <div id="container">
+
+
+            <!-- VIDÉOS  -->
+
+            <div id="pick_video">
+                <p>
+                    Pick a movie:
+                </p>
+                <select id="movies">
+                    <option value="10">Avengers:Endgame(10€)</option>
+                    <option value="12">Deadpool(12€)</option>
+                    <option value="8">Shrek(8€)</option>
+                    <option value="5">Brothers Bears(5€)</option>
+                </select>
+            </div>
+
+
+            <!--  SEAT STATUS  -->
+            <div id="seat_status">
+                <div id="seat">
+                    <div class="seat seat_na"></div>
+                    <p>N/A</p>
+                </div>
+
+                <div id="seat">
+                    <div class="seat seat_selected"></div>
+                    <p>Selected</p>
+                </div>
+
+                <div id="seat">
+                    <div class="seat seat_occupied"></div>
+                    <p>Occupied</p>
+                </div>
+            </div>
+
+
+            <!--  ROOM  -->
+            <div id="roomAndscreen">
+                <div id="screen"></div>
+                <div class="col" id="room">
+
+                    <div class="col" id="col_lat_right">
+                        <div class='column_room'> 
+                            <div class="seat seat_na"></div>
+                            <div class="seat seat_na"></div>
+                            <div class="seat seat_na"></div>
+                            <div class="seat seat_na"></div>
+                            <div class="seat seat_na"></div>
+                            <div class="seat seat_na"></div>
+                        </div>
+                        <div class='column_room'> 
+                            <div class="seat seat_na"></div>
+                            <div class="seat seat_na"></div>
+                            <div class="seat seat_na"></div>
+                            <div class="seat seat_na"></div>
+                            <div class="seat seat_na"></div>
+                            <div class="seat seat_na"></div>
+                        </div>
+
+                    </div>
+
+                    <div class="col" id="col_center">
+                        <div class='column_room'> 
+                            <div class="seat seat_na"></div>
+                            <div class="seat seat_na"></div>
+                            <div class="seat seat_na"></div>
+                            <div class="seat seat_na"></div>
+                            <div class="seat seat_na"></div>
+                            <div class="seat seat_na"></div>
+                        </div>
+                        <div class='column_room'> 
+                            <div class="seat seat_na"></div>
+                            <div class="seat seat_occupied"></div>
+                            <div class="seat seat_na"></div>
+                            <div class="seat seat_na"></div>
+                            <div class="seat seat_occupied"></div>
+                            <div class="seat seat_na"></div>
+                        </div>
+                        <div class='column_room'> 
+                            <div class="seat seat_na"></div>
+                            <div class="seat seat_occupied"></div>
+                            <div class="seat seat_na"></div>
+                            <div class="seat seat_na"></div>
+                            <div class="seat seat_occupied"></div>
+                            <div class="seat seat_occupied"></div>
+                        </div>
+                        <div class='column_room'> 
+                            <div class="seat seat_na"></div>
+                            <div class="seat seat_na"></div>
+                            <div class="seat seat_na"></div>
+                            <div class="seat seat_na"></div>
+                            <div class="seat seat_na"></div>
+                            <div class="seat seat_occupied"></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="col" id="col_lat_left">
+                        <div class='column_room'> 
+                            <div class="seat seat_na"></div>
+                            <div class="seat seat_na"></div>
+                            <div class="seat seat_occupied"></div>
+                            <div class="seat seat_na"></div>
+                            <div class="seat seat_na"></div>
+                            <div class="seat seat_occupied"></div>
+                        </div>
+                        <div class='column_room'> 
+                            <div class="seat seat_na"></div>
+                            <div class="seat seat_na"></div>
+                            <div class="seat seat_occupied"></div>
+                            <div class="seat seat_na"></div>
+                            <div class="seat seat_na"></div>
+                            <div class="seat seat_na"></div>
+                        </div>
+
+                    </div>
+
+                    
+
+
+                </div>
+            </div>
+
+
+            <!-- RESUME   -->
+            <div id="resume">
+                <p>
+                    You have selected 
+                    <span class="aqua" id="nb_seat">
+                        0
+                    </span> 
+                    seats for a price of $
+                    <span class="aqua" id="price">
+                        70
+                    </span> 
+                </p>
+            </div>
+
+        </div>
+        <script src="movie.js"></script>
+    </body>
+</html>
